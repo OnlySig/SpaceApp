@@ -19,7 +19,6 @@ const TextoSpan = styled.span `
 `
 
 const Banner = ({children, img}) => {
-    console.log(img)
     return(
         <BannerContainer $img={img}>
             <TextoSpan>
