@@ -18,7 +18,7 @@ const TextoSpan = styled.span `
     width: 300px;
 `
 
-const Banner = ({children, img}) => {
+const Banner = ({children, img }) => {
     return(
         <BannerContainer $img={img}>
             <TextoSpan>

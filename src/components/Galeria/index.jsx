@@ -17,8 +17,7 @@ const ElementContent = styled.div `
     gap: 24px;
 `
 
-const Galeria = ({ fotos = [] }) => {
-    console.log(fotos)
+const Galeria = ({ fotos = [], aoFotoSelecionada}) => {
     return(
         <>
             <Tags/>
@@ -26,7 +25,7 @@ const Galeria = ({ fotos = [] }) => {
                 <SecaoPrincipal>
                     <Titulo>Navegue por galeria!</Titulo>
                     <ElementContent>
-                        {fotos.map(foto => <ElementGaleria key={foto.id} valores={foto}></ElementGaleria>)}
+                        {fotos.map(foto => <ElementGaleria aoZoomSolicitado={aoFotoSelecionada} key={foto.id} valores={foto}></ElementGaleria>)}
                     </ElementContent>
                 </SecaoPrincipal>
                 <Populares/>

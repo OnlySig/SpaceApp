@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const ContainerElement = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
 `
@@ -47,7 +48,16 @@ const IconFavoElement = styled.img `
 const IconExpandElement = styled.img `
     cursor: pointer;
 `
-const ElementGaleria = ({ valores }) => {
+const IconDeleteElement = styled.img `
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+`
+const deletaElement = (e) => {
+    e.target.parentNode.parentNode.parentNode.parentNode.remove()
+}
+
+const ElementGaleria = ({ valores, aoZoomSolicitado, expandida=false}) => {
     return(
         <ContainerElement>
             <ImgElement $url={valores.path}/>
@@ -57,7 +67,7 @@ const ElementGaleria = ({ valores }) => {
                     <ParagrafElement>{valores.fonte}</ParagrafElement>
                     <IconsElement>
                         <IconFavoElement src="/icons/favorito.png"/>
-                        <IconExpandElement src="/icons/expandir.png"/>
+                        {expandida ? <IconDeleteElement src="/icons/fechar.png" onClick={(e) => deletaElement(e)}/> : <IconExpandElement src="/icons/expandir.png" onClick={() => aoZoomSolicitado(valores)}/>}
                     </IconsElement>
                 </OtherInfosElement>
             </ContentInfosElement>
