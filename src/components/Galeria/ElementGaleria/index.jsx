@@ -1,18 +1,21 @@
 import styled from "styled-components"
 
 const ContainerElement = styled.div`
+    flex-grow: 1;
     position: relative;
     display: flex;
     flex-direction: column;
 `
-
 const ImgElement = styled.div`
+    display: flex;
+    flex-grow: 1;
     background-image: url(${valores => valores.$url});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 448px;
-    height: 256px;
+    width: 100%;
+    height: ${$expandida => $expandida.$expandida ? '660px' : '256px'};
+    min-width: 400px;
     border-radius: 20px 20px 0 0;
 `
 const ContentInfosElement = styled.div `
@@ -53,21 +56,17 @@ const IconDeleteElement = styled.img `
     position: absolute;
     top: 16px;
 `
-const deletaElement = (e) => {
-    e.target.parentNode.parentNode.parentNode.parentNode.remove()
-}
-
 const ElementGaleria = ({ valores, aoZoomSolicitado, expandida=false}) => {
     return(
         <ContainerElement>
-            <ImgElement $url={valores.path}/>
+            <ImgElement $url={valores.path} $expandida={expandida}/>
             <ContentInfosElement>
                 <TitleElement>{valores.titulo}</TitleElement>
                 <OtherInfosElement>
                     <ParagrafElement>{valores.fonte}</ParagrafElement>
                     <IconsElement>
                         <IconFavoElement src="/icons/favorito.png"/>
-                        {expandida ? <IconDeleteElement src="/icons/fechar.png" onClick={(e) => deletaElement(e)}/> : <IconExpandElement src="/icons/expandir.png" onClick={() => aoZoomSolicitado(valores)}/>}
+                        {expandida ? '' : <IconExpandElement src="/icons/expandir.png" onClick={() => aoZoomSolicitado(valores)}/>}
                     </IconsElement>
                 </OtherInfosElement>
             </ContentInfosElement>

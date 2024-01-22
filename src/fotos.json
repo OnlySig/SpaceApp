@@ -4,7 +4,7 @@
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-1.png",
     "id": "1",
-    "tagId": 2
+    "tagId": 1
   },
   {
     "titulo": "Via Láctea",
@@ -25,48 +25,48 @@
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-4.png",
     "id": "4",
-    "tagId": 2
+    "tagId": 4
   },
   {
     "titulo": "Estrela Pistola",
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-5.png",
     "id": "5",
-    "tagId": 1
+    "tagId": 5
   },
   {
     "titulo": "Ilustração",
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-6.png",
     "id": "6",
-    "tagId": 4
+    "tagId": 6
   },
   {
     "titulo": "Galáxia de Andrómeda",
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-7.png",
     "id": "7",
-    "tagId": 2
+    "tagId": 7
   },
   {
     "titulo": "Ilustração",
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-8.png",
     "id": "8",
-    "tagId": 4
+    "tagId": 8
   },
   {
     "titulo": "Céu estrelado",
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-9.png",
     "id": "9",
-    "tagId": 1
+    "tagId": 9
   },
   {
     "titulo": "Ilustração",
     "fonte": "Alura Space",
     "path": "/imgs/galeria/foto-10.png",
     "id": "10",
-    "tagId": 1
+    "tagId": 10
   }
 ]

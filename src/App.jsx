@@ -30,9 +30,7 @@ const GaleriaContainer = styled.section`
   flex-direction: column;
   flex-grow: 1;
 `
-
 const App = () => {
-  
   const [fotosGaleria, setFotosGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
   
@@ -51,7 +49,7 @@ const App = () => {
           </GaleriaContainer>
         </MainContent>
       </AppContainer>
-      <ModalZoom foto={fotoSelecionada}/>
+      <ModalZoom foto={fotoSelecionada} aoFechar={() => setFotoSelecionada(null)}/>
     </FundoGradiente>
   )
 }
