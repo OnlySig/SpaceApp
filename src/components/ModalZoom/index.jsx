@@ -23,14 +23,14 @@ const ImgExpandida = styled.div`
     width: 1126px;
     height: 660px;
 `
-const ModalZoom = ({ foto, aoFechar }) => {
+const ModalZoom = ({ aoAlternarFavorito, foto, aoFechar }) => {
     return(
         <>
             {foto && <DialogElement open={!!foto}>
                 <Overlay/>
                 <FormElement method="dialog">
                     <ImgExpandida>
-                        <ElementGaleria valores={foto} expandida={true}/>
+                        <ElementGaleria aoAlternarFavorito={(foto) =>aoAlternarFavorito(foto)} valores={foto} expandida={true}/>
                     </ImgExpandida>
                     <Botao ativo aoEvento={aoFechar}>{<img src="icons/fechar.png"></img>}</Botao>
                 </FormElement>

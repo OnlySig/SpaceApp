@@ -14,8 +14,8 @@ const ImgElement = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: ${$expandida => $expandida.$expandida ? '660px' : '256px'};
     min-width: 400px;
+    height: ${$expandida => $expandida.$expandida ? '660px' : '256px'};
     border-radius: 20px 20px 0 0;
 `
 const ContentInfosElement = styled.div `
@@ -45,18 +45,14 @@ const IconsElement = styled.div `
     display: flex;
     gap: 24px;
 `
-const IconFavoElement = styled.img `
+const IconFavoritoElement = styled.img `
     cursor: pointer;
 `
 const IconExpandElement = styled.img `
     cursor: pointer;
 `
-const IconDeleteElement = styled.img `
-    cursor: pointer;
-    position: absolute;
-    top: 16px;
-`
-const ElementGaleria = ({ valores, aoZoomSolicitado, expandida=false}) => {
+const ElementGaleria = ({ aoAlternarFavorito, valores, aoZoomSolicitado, expandida=false }) => {
+    const iconeFavorito = valores.favorita ? '/icons/favorito-ativo.png' : '/icons/favorito.png'
     return(
         <ContainerElement>
             <ImgElement $url={valores.path} $expandida={expandida}/>
@@ -65,7 +61,7 @@ const ElementGaleria = ({ valores, aoZoomSolicitado, expandida=false}) => {
                 <OtherInfosElement>
                     <ParagrafElement>{valores.fonte}</ParagrafElement>
                     <IconsElement>
-                        <IconFavoElement src="/icons/favorito.png"/>
+                        <IconFavoritoElement src={iconeFavorito} onClick={() => aoAlternarFavorito(valores)}/>
                         {expandida ? '' : <IconExpandElement src="/icons/expandir.png" onClick={() => aoZoomSolicitado(valores)}/>}
                     </IconsElement>
                 </OtherInfosElement>

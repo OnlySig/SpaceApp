@@ -15,13 +15,9 @@ const PopularImage = styled.img`
 const Populares = () => {
     return(
         <PopularContainer>
-            <Titulo $align="center">
-                Populares
-            </Titulo>
-            {fotos.map(foto => <PopularImage key={foto.id} src={foto.path}></PopularImage>)}
-            <Botao>
-                Ver mais
-            </Botao>
+            <Titulo $align="center">Populares</Titulo>
+            {fotos.map(foto => <PopularImage key={foto.id} src={foto.path} alt={foto.alt}></PopularImage>)}
+            <Botao>Ver mais</Botao>
         </PopularContainer>
     )
 }

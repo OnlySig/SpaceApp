@@ -1,37 +1,27 @@
 [
     {
-      "titulo": "Grande Nuvem de Magalhães",
-      "fonte": "Alura Space",
       "path": "/imgs/galeria/foto-11.png",
-      "id": "11",
-      "tagId": 11
+      "alt": "nuvem",
+      "id": "1"
     },
     {
-      "titulo": "Via Láctea",
-      "fonte": "Alura Space",
       "path": "/imgs/galeria/foto-12.png",
-      "id": "12",
-      "tagId": 12
+      "alt": "galaxias",
+      "id": "2"
     },
     {
-      "titulo": "Lua: quarto minguante",
-      "fonte": "Alura Space",
       "path": "/imgs/galeria/foto-13.png",
-      "id": "13",
-      "tagId": 13
+      "alt": "lua",
+      "id": "3"
     },
     {
-      "titulo": "Galáxia de Andrómeda",
-      "fonte": "Alura Space",
       "path": "/imgs/galeria/foto-14.png",
-      "id": "14",
-      "tagId": 14
+      "alt": "deserto",
+      "id": "4"
     },
     {
-      "titulo": "Estrela Pistola",
-      "fonte": "Alura Space",
       "path": "/imgs/galeria/foto-15.png",
-      "id": "5",
-      "tagId": 15
+      "alt": "cometa",
+      "id": "5"    
     }
 ]
